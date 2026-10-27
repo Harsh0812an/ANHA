@@ -12,21 +12,25 @@ class ANHA_MainMenu
             System.out.println("   ANHA BIO SYSTEM MENU");
             System.out.println("=========================");
             System.out.println("1. DNA Analyzer");
-            System.out.println("2. Sequence Alignment + Mutation");
-            System.out.println("3. Exit");
+            System.out.println("2. Sequence Alignment ");
+            System.out.println("3. Mutation detection");
+            System.out.println("4. Exit");
             System.out.print("Enter choice: ");
 
-            int choice = sc.nextInt();
-
-            if(choice == 1)
+            int choice=sc.nextInt();
+            if(choice==1)
             {
                 DNA_Analyzer.main(null);   // redirect
             }
-            else if(choice == 2)
+            else if(choice==2)
             {
                 Sequence_Alignment.main(null); // redirect
             }
-            else if(choice == 3)
+            else if(choice==3)
+            {
+                Mutation_finder.main(null);//redirect
+            }
+            else if(choice==4)
             {
                 System.out.println("Exiting system...");
                 break;
