@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-// SEQUENCE ALIGNMENT + MUTATION MODULE
+// SEQUENCE ALIGNMENT 
 public class Sequence_Alignment
 {
     public static void main(String args[])
@@ -91,87 +91,21 @@ public class Sequence_Alignment
         System.out.println("\n===== FINAL ALIGNMENT =====");
         System.out.println("DNA 1 : "+a1);
         System.out.println("DNA 2 : "+a2);
-
-        // MUTATION COUNT
-        int matches=0,sub=0,ins=0,del=0;
-
-        for(int k=0;k<a1.length();k++)
-        {
-            if(a1.charAt(k)==a2.charAt(k)) matches++;
-            else if(a1.charAt(k)=='-') ins++;
-            else if(a2.charAt(k)=='-') del++;
-            else sub++;
-        }
-
-        System.out.println("\n===== MUTATION REPORT =====");
-
-        System.out.println("Matches       : "+matches);
-        System.out.println("Substitutions : "+sub);
-        System.out.println("Insertions    : "+ins);
-        System.out.println("Deletions     : "+del);
-
-        // MUTATION DETECTOR (POSITION WISE)
-        System.out.println("\n===== ANHA MUTATION DETECTOR =====\n");
-
-        for(int k=0;k<a1.length();k++)
-        {
-            char c1=a1.charAt(k);
-            char c2=a2.charAt(k);
-
-            if(c1==c2) continue;
-
-            System.out.println("Position "+(k+1));
-
-            if(c1=='-')
-                System.out.println("Insertion of "+c2);
-            else if(c2=='-')
-                System.out.println("Deletion of "+c1);
-            else
-            {
-                System.out.println(c1+" -> "+c2);
-                System.out.println("Substitution");
-            }
-
-            System.out.println();
-        }
-
-        int total=matches+sub+ins+del;
-
-        double similarity=(total>0)?(matches*100.0)/total:0;
-        double mutationRate=100-similarity;
-
-        System.out.printf("Similarity      : %.2f%%\n",similarity);
-        System.out.printf("Mutation Rate   : %.2f%%\n",mutationRate);
-
         // REPORT
         System.out.println("\nSave report? (yes/no)");
         String save=sc.next();
-
         if(save.equalsIgnoreCase("yes"))
         {
             try
             {
                 FileWriter fw=new FileWriter("Alignment_Report.txt");
-
                 LocalDateTime now=LocalDateTime.now();
                 DateTimeFormatter dtf=DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-
                 fw.write("===== ALIGNMENT REPORT =====\n");
                 fw.write("Generated: "+now.format(dtf)+"\n\n");
-
                 fw.write("Aligned DNA 1: "+a1+"\n");
                 fw.write("Aligned DNA 2: "+a2+"\n\n");
-
-                fw.write("Matches: "+matches+"\n");
-                fw.write("Substitutions: "+sub+"\n");
-                fw.write("Insertions: "+ins+"\n");
-                fw.write("Deletions: "+del+"\n\n");
-
-                fw.write("Similarity: "+similarity+"%\n");
-                fw.write("Mutation Rate: "+mutationRate+"%\n");
-
                 fw.close();
-
                 System.out.println("Report saved as Alignment_Report.txt");
             }
             catch(IOException e)
