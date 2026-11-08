@@ -1,54 +1,129 @@
-# ANHA
+# ANHA – Bioinformatics Toolkit
 
-**ANHA** is a Java-based bioinformatics project focused on DNA sequence analysis and genetic data processing.
+**ANHA** is a Java-based bioinformatics toolkit focused on DNA sequence analysis and genetic data processing. The project aims to develop modular biomedical tools through a terminal-based interface, with future plans for web application deployment and advanced biomedical analysis.
 
-The goal of ANHA is to provide a modular platform capable of analyzing DNA sequences, performing sequence alignment, detecting mutations, and generating detailed analysis reports. The project is being developed in phases, with each module extending the system's capabilities.
+---
 
-## Current Features
+## Project Overview
 
-* DNA Sequence Analysis
-* Sequence Alignment
-* Mutation Detection
-* Text Report Generation
+ANHA is being developed as a modular bioinformatics system consisting of multiple tools for processing and analyzing biological data.
 
-## Planned Features
+The project is currently focused on building a functional terminal-based toolkit using Java, with future expansion into web-based applications and advanced biomedical technologies.
 
-* Motif Detection
-* DNA Comparison
-* GC Content Analysis
-* Biological Statistics
-* Advanced Sequence Alignment Algorithms
-* Terminal-based GUI
-* Enhanced User Experience
+---
+
+## Features
+
+- DNA sequence analysis
+- Global sequence alignment
+- Mutation detection
+- DNA sequence validation
+- Open Reading Frame (ORF) identification
+- Protein translation
+- Modular terminal-based architecture
+- Text-based analysis and reporting
+
+---
+
+## Current Modules
+
+### Phase 1 – Completed
+
+- DNA Analyzer
+- Sequence Alignment
+- Mutation Finder
+- Main Menu
+
+### Phase 2 – Under Development
+
+- Sequence Validator
+- ORF Finder
+- Protein Translator
+- Biomedical Calculator
+
+---
 
 ## Technologies Used
 
-* Java
-* Object-Oriented Programming (OOP)
-* File Handling
-* Algorithms
-* Bioinformatics Concepts
+- Java
+- Object-Oriented Programming
+- Dynamic Programming
+- String Manipulation
+- File Handling
+- Bioinformatics Algorithms
+- Terminal-based Interface
 
-## Development Status
+---
 
-### Phase 1 (In Progress)
+## Development Phases
 
-Completed:
+### Phase 1 – Core Bioinformatics Toolkit
+**Status: Completed**
 
-* DNA Analyzer
-* Sequence Alignment
-* Mutation Detector
-* Report Generation
+Development of the fundamental DNA processing modules, including sequence analysis, alignment, mutation detection, and report generation.
 
-### Phase 2 (Planned)
+### Phase 2 – Advanced Terminal Modules
+**Status: Under Development**
 
-* Support DNA input through **FASTA (.fasta)** files in addition to manual entry.
-* Develop a web-based interface using **HTML, CSS, and JavaScript** while retaining the Java backend.
-* Improve usability and overall user experience.
+Expansion of ANHA through additional bioinformatics functionalities, including ORF identification, protein translation, sequence validation, and biomedical calculations.
 
-## Future Vision
+### Phase 3 – Advanced Development
+**Status: Planned**
 
-ANHA aims to evolve into a comprehensive bioinformatics toolkit capable of performing DNA analysis, sequence comparison, mutation detection, and additional genetic data processing through a modular and extensible architecture.
+Two potential development directions:
+
+**Path 1 – Web Application**
+- Treat the Java toolkit as an API.
+- Develop a graphical web interface.
+- Deploy the web application.
+
+**Path 2 – Biomedical Image Analysis**
+- Human bone-set image analysis.
+- Integration of image-processing technologies such as PyTorch.
+- Potential third-party development and implementation.
+
+---
+
+## Future Improvements
+
+- FASTA file input support across modules
+- Integration of all modules through the Main Menu
+- Improved sequence processing algorithms
+- Enhanced reporting capabilities
+- Web application deployment
+- Advanced biomedical image analysis
+
+---
+
+## Project Structure
+
+```text
+ANHA/
+│
+├── DNAAnalyzer/
+├── SequenceAlignment/
+├── MutationFinder/
+├── MainMenu/
+├── SequenceValidator/
+├── ORFFinder/
+├── ProteinTranslator/
+├── BiomedicalCalculator/
+│
+└── README.md
+```
+
+*The repository structure may evolve as modules are developed and integrated.*
+
+---
+
+## Current Status
+
+- Phase 1 completed
+- Phase 2 modules under development
+- Terminal-based Java toolkit
+- Future web application and biomedical image analysis planned
+
+---
 
 ## Author
 
