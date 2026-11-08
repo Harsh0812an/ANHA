@@ -1,6 +1,6 @@
 # Main Menu
 
-The **Main Menu** serves as the entry point of the ANHA DNA Analyzer module. It provides a centralized interface for accessing all available DNA analysis functionalities.
+The **Main Menu** serves as the entry point of the ANHA Bioinformatics Toolkit. It provides a centralized interface for accessing the implemented bioinformatics modules.
 
 Users can navigate through different modules by selecting the corresponding menu options.
 
@@ -10,7 +10,7 @@ Users can navigate through different modules by selecting the corresponding menu
 
 - Centralized navigation
 - User-friendly menu-driven interface
-- Access to all implemented DNA analysis modules
+- Access to implemented ANHA modules
 - Handles user input and module selection
 - Supports modular expansion for future updates
 
@@ -26,7 +26,7 @@ Users can navigate through different modules by selecting the corresponding menu
 
 ## Workflow
 
-```
+```text
 Start Program
       │
       ▼
@@ -53,16 +53,17 @@ Return to Main Menu / Exit
 - Terminal-based interface
 - Menu-driven navigation implemented
 - Integrates all Phase 1 modules
+- Serves as the central navigation system for ANHA
 
 ---
 
 ## Future Enhancements
 
+- Integration of Phase 2 modules
+- FASTA file input support
 - Graphical User Interface (GUI)
-- Additional ANHA modules
-- User authentication
-- Settings and preferences
-- Module version management
+- Additional bioinformatics modules
+- Improved module navigation and functionality
 
 ---
 
